@@ -1,0 +1,11 @@
+Addon info:
+
+The PSoC VDDIO Domains are separated as 
+VDDIO 0 - P0 and P4 P12:2SIO
+VDDIO 1 - P1 and P5 P12:2SIO
+VDDIO 2 - P2 and P6 P12:I2C
+VDDIO 3 - P3 P12:I2C
+
+Therefore Analog domans are [P0 P4]:[VDDIO0] and [P3]:[VDDIO3] which have to remain at 5V
+The domain VDDIO1 contains P1 (JTAG, XRES), P5 () and P12:SIO. Because of JTAG this must also sit at constant voltage. 
+Therefore leaving only VDDIO2 for Jumpered IO Voltage selection; which is available on ports P2, P6, P12(I2C) and P15 (2GPIO)
